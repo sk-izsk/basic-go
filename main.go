@@ -177,5 +177,22 @@ func main() {
 
 	fmt.Println("matrix:", matrix)
 
-	// slices
+	// slices --> dynamic
+
+	var sil = make([]int, 0, 5) // length 0, capacity 5
+	sil = append(sil, 1)
+	sil = append(sil, 2)
+	sil = append(sil, 3)
+
+	sil = append(sil, 4)
+	sil = append(sil, 5)
+	sil = append(sil, 6) // length 6, capacity 10
+	sil = append(sil, 7) // length 7, capacity 10
+
+	fmt.Println("sil:", sil)
+
+	fmt.Println("cap(sil):", cap(sil))
+
+	// copy function
+
 }
