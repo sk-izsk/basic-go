@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"slices"
 	"time"
 )
 
@@ -195,4 +196,29 @@ func main() {
 
 	// copy function
 
+	var num1 = make([]int, 0, 5)
+	num1 = append(num1, 2)
+
+	var num2 = make([]int, len(num1))
+
+	fmt.Println("num1:", num1)
+
+	copy(num2, num1)
+
+	fmt.Println("num2:", num2)
+
+	//slice operator
+
+	var num3 = []int{1, 2, 3}
+
+	fmt.Println("slice", num3[0:2]) // from index 0 to index 2-1
+	fmt.Println("slice", num3[1:])  // from index 1 to end
+	fmt.Println("slice", num3[:1])  // from start to index 1-1
+
+	//slice package
+
+	var num4 = []int{5, 6, 7, 8, 9}
+	var num5 = []int{1, 2, 3, 4, 5}
+
+	fmt.Println("equal", slices.Equal(num4, num5))
 }
