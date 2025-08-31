@@ -218,7 +218,10 @@ func main() {
 	//slice package
 
 	var num4 = []int{5, 6, 7, 8, 9}
+	fmt.Println("🚀 ~ num4 : ", num4)
 	var num5 = []int{1, 2, 3, 4, 5}
+	fmt.Println("🚀 ~ num5 : ", num5)
+	fmt.Println("🚀 ~ num6 : ", num5)
 
 	fmt.Println("equal", slices.Equal(num4, num5))
 }
